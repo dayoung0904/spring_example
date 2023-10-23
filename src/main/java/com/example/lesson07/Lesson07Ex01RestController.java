@@ -28,4 +28,20 @@ public class Lesson07Ex01RestController {
 		// 지금 들어간 id값도 바로 꺼낼 수 있다. getID();
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
+	
+	// U:update
+	@GetMapping("/2")
+	public StudentEntity update() {
+		// id:4 dreamJob을 변경
+		// JSON으로 최종 응답받음
+		return studentBO.updateStudentDreamJobById(4, "디자이너");
+	}
+	
+	// D:delete
+	@GetMapping("/3")
+	public String delete() {
+		// id:6을 삭제
+		studentBO.deleteStudentById(6);
+		return "삭제완료";
+	}
 }
