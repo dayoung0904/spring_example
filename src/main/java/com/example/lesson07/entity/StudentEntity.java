@@ -1,7 +1,6 @@
 package com.example.lesson07.entity;
 
 import java.time.ZonedDateTime;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
